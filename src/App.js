@@ -1,6 +1,7 @@
 import Footer from "./Footer";
 import Buttons from "./Buttons";
 import Input from "./Input";
+import Legend from "./Legend";
 
 function App() {
   return (
@@ -8,7 +9,7 @@ function App() {
       <div className="container">
         <form className="form">
           <fieldset className="form__fieldset">
-            <legend className="form__legend">Currency converter</legend>
+            <Legend title="Currency converter" />
             <Input />
             <label>
               <span className="form__labelText">Set currency:</span>
