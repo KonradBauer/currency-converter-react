@@ -3,12 +3,14 @@ import Buttons from "./Buttons";
 import Input from "./Input";
 import Legend from "./Legend";
 import Label from "./Label";
+import Form from "./Form";
+import Container from "./Container";
 
 function App() {
   return (
     <body>
-      <div className="container">
-        <form className="form">
+      <Container>
+        <Form>
           <fieldset className="form__fieldset">
             <Legend title="Currency converter" />
             <Input />
@@ -18,9 +20,9 @@ function App() {
             <span>Result:</span>
           </section>
           <Buttons />
-        </form>
+        </Form>
         <Footer />
-      </div>
+      </Container>
     </body>
   );
 }
