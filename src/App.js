@@ -2,6 +2,7 @@ import Footer from "./Footer";
 import Buttons from "./Buttons";
 import Input from "./Input";
 import Legend from "./Legend";
+import Label from "./Label";
 
 function App() {
   return (
@@ -11,14 +12,7 @@ function App() {
           <fieldset className="form__fieldset">
             <Legend title="Currency converter" />
             <Input />
-            <label>
-              <span className="form__labelText">Set currency:</span>
-              <select className="form__input" name="currency">
-                <option value="EUR">Euro</option>
-                <option value="USD">US Dollar</option>
-                <option value="RUB">Ruble</option>
-              </select>
-            </label>
+            <Label />
           </fieldset>
           <section className="form__result">
             <span>Result:</span>
