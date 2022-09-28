@@ -5,20 +5,20 @@ import Legend from "./Legend";
 import Label from "./Label";
 import Form from "./Form";
 import Container from "./Container";
+import Fieldset from "./Fieldset";
+import Section from "./Section";
 
 function App() {
   return (
     <body>
       <Container>
         <Form>
-          <fieldset className="form__fieldset">
+          <Fieldset>
             <Legend title="Currency converter" />
-            <Input />
+            <Input placeholder="Set your PLN amount" />
             <Label />
-          </fieldset>
-          <section className="form__result">
-            <span>Result:</span>
-          </section>
+          </Fieldset>
+          <Section text="Result:"></Section>
           <Buttons />
         </Form>
         <Footer />
