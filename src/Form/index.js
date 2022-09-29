@@ -1,9 +1,5 @@
 import "./style.css";
 
-const Form = ({ children }) => (
-  <div className="form">
-    <p>{children}</p>
-  </div>
-);
+const Form = ({ children }) => <form className="form">{children}</form>;
 
 export default Form;
