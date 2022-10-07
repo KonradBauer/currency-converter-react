@@ -2,11 +2,10 @@ import Footer from "./Footer";
 import Buttons from "./Buttons";
 import Input from "./Input";
 import Legend from "./Legend";
-import Label from "./Label";
 import Form from "./Form";
 import Container from "./Container";
 import Fieldset from "./Fieldset";
-import Section from "./Section";
+import SectionResult from "./SectionResult";
 
 function App() {
   return (
@@ -15,10 +14,19 @@ function App() {
         <Form>
           <Fieldset>
             <Legend title="Currency converter" />
-            <Input placeholder="Set your PLN amount" />
-            <Label />
+            <Input placeholder="set your PLN amount" />
+            <p>
+              <label>
+                <span className="form__labelText"> Set currency:</span>
+                <select className="form__input" name="currency">
+                  <option value="EUR">Euro</option>
+                  <option value="USD">US Dollar</option>
+                  <option value="RUB">Ruble</option>
+                </select>
+              </label>
+            </p>
           </Fieldset>
-          <Section text="Result:"></Section>
+          <SectionResult />
           <Buttons />
         </Form>
         <Footer />

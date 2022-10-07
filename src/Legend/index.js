@@ -1,9 +1,5 @@
 import "./style.css";
 
-const Legend = ({ title }) => (
-  <label>
-    <legend className="form__legend">{title}</legend>
-  </label>
-);
+const Legend = ({ title }) => <legend className="form__legend">{title}</legend>;
 
 export default Legend;
