@@ -1,9 +1,9 @@
 import "./style.css";
 
-const Input = ({ placeholder }) => (
+const Input = ({ placeholder, labelText }) => (
   <p>
     <label>
-      <span className="form__labelText"> Amount*:</span>
+      <span className="form__labelText">{labelText}</span>
       <input
         className="form__input"
         min="1"
