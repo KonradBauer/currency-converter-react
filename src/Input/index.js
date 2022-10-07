@@ -3,7 +3,7 @@ import "./style.css";
 const Input = ({ placeholder }) => (
   <p>
     <label>
-      <span className="form__labelText">Amount*:</span>
+      <span className="form__labelText"> Amount*:</span>
       <input
         className="form__input"
         min="1"
