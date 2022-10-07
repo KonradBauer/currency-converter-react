@@ -6,6 +6,7 @@ import Form from "./Form";
 import Container from "./Container";
 import Fieldset from "./Fieldset";
 import SectionResult from "./SectionResult";
+import SelectBody from "./SelectBody";
 
 function App() {
   return (
@@ -14,17 +15,8 @@ function App() {
         <Form>
           <Fieldset>
             <Legend title="Currency converter" />
-            <Input placeholder="set your PLN amount" />
-            <p>
-              <label>
-                <span className="form__labelText"> Set currency:</span>
-                <select className="form__input" name="currency">
-                  <option value="EUR">Euro</option>
-                  <option value="USD">US Dollar</option>
-                  <option value="RUB">Ruble</option>
-                </select>
-              </label>
-            </p>
+            <Input placeholder="set your PLN amount" labelText=" Amount*:" />
+            <SelectBody labelText="Set currency:" />
           </Fieldset>
           <SectionResult />
           <Buttons />
