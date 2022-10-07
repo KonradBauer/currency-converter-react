@@ -5,6 +5,7 @@
   color: whitesmoke;
   padding: 5px;
   transition: 0.5s;
+  margin: 2px;
 }
 
 .form__button:hover {
