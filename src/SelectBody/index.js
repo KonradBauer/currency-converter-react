@@ -1,17 +1,19 @@
 import "./style.css";
+import "../currencies";
 
-const SelectBody = ({ labelText }) => (
-  <p>
-    <label>
-      <span className="form__labelText">{labelText}</span>
-      <select className="form__input" name="currency">
-        <option value="EUR">Euro</option>
-        <option value="USD">USD</option>
-        <option value="RUB">Ruble</option>
-        <option value="CHF">Franc</option>
-      </select>
-    </label>
-  </p>
-);
+const SelectBody = ({ labelText, currencies }) => {
+  return (
+    <p>
+      <label>
+        <span className="form__labelText">{labelText}</span>
+        <select className="form__input" name="currency">
+          {currencies.map((currency) => (
+            <option>{currency.name}</option>
+          ))}
+        </select>
+      </label>
+    </p>
+  );
+};
 
 export default SelectBody;
