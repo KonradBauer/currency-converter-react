@@ -8,7 +8,7 @@ const SelectBody = ({ labelText }) => {
         <span className="form__labelText">{labelText}</span>
         <select className="form__input">
           {currencies.map((currency) => (
-            <option>{currency.name}</option>
+            <option key={currency.key}>{currency.name}</option>
           ))}
         </select>
       </label>
