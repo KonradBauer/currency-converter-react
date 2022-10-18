@@ -17,7 +17,7 @@ const Input = ({ placeholder, labelText }) => {
           placeholder={placeholder}
           type="number"
           step="any"
-          autofocus
+          autoFocus
           required
         />
       </label>
