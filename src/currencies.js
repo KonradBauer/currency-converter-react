@@ -1,26 +1,26 @@
 const currencies = [
   {
-    key: EUR,
-    currencyName: "Euro",
-    shortcut: EUR,
+    key: 1,
+    name: "Euro",
+    shortcut: "EUR",
     value: 4.87,
   },
   {
-    key: USD,
-    currencyName: "American Dollar",
-    shortcut: USD,
+    key: 2,
+    name: "American Dollar",
+    shortcut: "USD",
     value: 4.97,
   },
   {
-    key: RUB,
-    currencyName: "Ruble",
-    shortcut: RUB,
+    key: 3,
+    name: "Ruble",
+    shortcut: "RUB",
     value: 0.081,
   },
   {
-    key: CHF,
-    currencyName: "Franc",
-    shortcut: CHF,
+    key: 4,
+    name: "Franc",
+    shortcut: "CHF",
     value: 5.01,
   },
 ];
