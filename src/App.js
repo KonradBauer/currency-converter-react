@@ -8,7 +8,6 @@ import Container from "./Container";
 import Fieldset from "./Fieldset";
 import SectionResult from "./SectionResult";
 import SelectBody from "./SelectBody";
-import currencies from "./currencies";
 
 function App() {
   const [result, setResult] = useState("");
@@ -20,7 +19,7 @@ function App() {
   return (
     <body>
       <Container>
-        <Form calculateResult={calculateResult}>
+        <Form calculateResult={calculateResult} result={result}>
           <Fieldset>
             <Legend title="Currency converter" />
             <Input placeholder="set your PLN amount" labelText=" Amount*:" />
