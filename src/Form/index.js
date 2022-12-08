@@ -1,8 +1,9 @@
 import "./style.css";
 
-const Form = ({ children }) => {
+const Form = ({ children, calculateResult }) => {
   const onFormSubmit = (event) => {
     event.preventDefault();
+    calculateResult();
   };
 
   return (
