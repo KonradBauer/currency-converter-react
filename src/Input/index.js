@@ -1,8 +1,14 @@
 import "./style.css";
+import currencies from "../currencies";
 import React, { useState } from "react";
 
 const Input = ({ placeholder, labelText }) => {
   const [amount, setAmount] = useState("");
+  const [result, setResult] = useState("");
+
+  const calculateResult = () => {
+    setResult();
+  };
 
   return (
     <p>
