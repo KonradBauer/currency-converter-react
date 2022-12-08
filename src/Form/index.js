@@ -1,4 +1,3 @@
-import { calculateNewValue } from "@testing-library/user-event/dist/utils";
 import "./style.css";
 
 const Form = ({ children }) => {
