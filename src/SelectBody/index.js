@@ -4,7 +4,6 @@ import currencies from "../currencies";
 
 const SelectBody = ({ labelText }) => {
   const [currency, setCurrency] = useState("");
-
   return (
     <p>
       <label>

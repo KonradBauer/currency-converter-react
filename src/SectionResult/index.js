@@ -1,10 +1,10 @@
 import "./style.css";
 import React from "react";
 
-const SectionResult = () => {
+const SectionResult = ({ calculateResult }) => {
   return (
     <section className="form__result">
-      <span>Result:</span>
+      <span>Result: {calculateResult}</span>
     </section>
   );
 };
