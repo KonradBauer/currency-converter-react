@@ -1,9 +1,7 @@
 import "./style.css";
 import React, { useState } from "react";
 
-const Input = ({ placeholder, labelText }) => {
-  const [amount, setAmount] = useState("");
-
+const Input = ({ placeholder, labelText, amount, setAmount }) => {
   return (
     <p>
       <label>
