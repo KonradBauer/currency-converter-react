@@ -20,10 +20,6 @@ function App() {
 
   const calculateDivision = amount / currency;
 
-  console.log(amount);
-  console.log(currency);
-  console.log(result);
-
   return (
     <body>
       <Container>
