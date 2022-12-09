@@ -11,12 +11,18 @@ import SelectBody from "./SelectBody";
 
 function App() {
   const [result, setResult] = useState("");
-  const [currency, setCurrency] = useState("");
+  const [currency, setCurrency] = useState(4.87);
   const [amount, setAmount] = useState("");
 
-  const calculateResult = (amount, currency) => {
-    setResult((result) => (result = amount / currency));
+  const calculateResult = () => {
+    setResult(calculateDivision);
   };
+
+  const calculateDivision = amount / currency;
+
+  console.log(amount);
+  console.log(currency);
+  console.log(result);
 
   return (
     <body>
