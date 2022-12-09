@@ -11,21 +11,32 @@ import SelectBody from "./SelectBody";
 
 function App() {
   const [result, setResult] = useState("");
+  const [currency, setCurrency] = useState("");
+  const [amount, setAmount] = useState("");
 
   const calculateResult = (amount, currency) => {
-    setResult((result = amount / currency));
+    setResult((result) => (result = amount / currency));
   };
 
   return (
     <body>
       <Container>
-        <Form calculateResult={calculateResult} result={result}>
+        <Form calculateResult={calculateResult} setAmount={setAmount}>
           <Fieldset>
             <Legend title="Currency converter" />
-            <Input placeholder="set your PLN amount" labelText=" Amount*:" />
-            <SelectBody labelText="Set currency:" />
+            <Input
+              amount={amount}
+              setAmount={setAmount}
+              placeholder="set your PLN amount"
+              labelText=" Amount*:"
+            />
+            <SelectBody
+              currency={currency}
+              setCurrency={setCurrency}
+              labelText="Set currency:"
+            />
           </Fieldset>
-          <SectionResult calculateResult={calculateResult} />
+          <SectionResult result={result} />
           <Buttons />
         </Form>
         <Footer />
