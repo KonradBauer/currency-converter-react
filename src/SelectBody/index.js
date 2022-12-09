@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import "./style.css";
 import currencies from "../currencies";
 
-const SelectBody = ({ labelText }) => {
-  const [currency, setCurrency] = useState("");
+const SelectBody = ({ labelText, currency, setCurrency }) => {
   return (
     <p>
       <label>
@@ -16,7 +15,9 @@ const SelectBody = ({ labelText }) => {
           }}
         >
           {currencies.map((currency) => (
-            <option key={currency.key}>{currency.name}</option>
+            <option key={currency.key} value={currency.value}>
+              {currency.name}
+            </option>
           ))}
         </select>
       </label>
