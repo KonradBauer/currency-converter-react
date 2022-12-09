@@ -15,7 +15,7 @@ function App() {
   const [amount, setAmount] = useState("");
 
   const calculateResult = () => {
-    setResult(calculateDivision);
+    setResult(calculateDivision.toFixed(2));
   };
 
   const calculateDivision = amount / currency;
