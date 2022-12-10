@@ -39,7 +39,7 @@ function App() {
             />
           </Fieldset>
           <SectionResult result={result} />
-          <Buttons />
+          <Buttons setResult={setResult} />
         </Form>
         <Footer />
       </Container>
