@@ -4,7 +4,9 @@ import React from "react";
 const SectionResult = ({ result }) => {
   return (
     <section className="form__result">
-      <span>Result: {result}</span>
+      <span>
+        Result: <span className="section__fontStyle">{result}</span>
+      </span>
     </section>
   );
 };
