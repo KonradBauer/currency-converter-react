@@ -14,11 +14,11 @@ function App() {
   const [currency, setCurrency] = useState(4.87);
   const [amount, setAmount] = useState("");
 
+  const calculateDivision = amount / currency;
+
   const calculateResult = () => {
     setResult(calculateDivision.toFixed(2));
   };
-
-  const calculateDivision = amount / currency;
 
   return (
     <body>
