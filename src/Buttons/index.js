@@ -1,6 +1,6 @@
 import "./style.css";
 
-const Buttons = ({ setResult }) => (
+const Buttons = ({ setResult, setAmount }) => (
   <p>
     <>
       <button className="form__button">Calculate</button>
@@ -8,7 +8,10 @@ const Buttons = ({ setResult }) => (
       <button
         className="form__button"
         type="reset"
-        onClick={() => setResult("")}
+        onClick={() => {
+          setResult("");
+          setAmount("");
+        }}
       >
         Reset
       </button>
