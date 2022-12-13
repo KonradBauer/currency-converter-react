@@ -8,16 +8,21 @@ import Container from "./Container";
 import Fieldset from "./Fieldset";
 import SectionResult from "./SectionResult";
 import SelectBody from "./SelectBody";
+import currencies from "./currencies";
 
 function App() {
-  const [result, setResult] = useState("");
+  const [resultData, setResultData] = useState({});
   const [currency, setCurrency] = useState(4.87);
   const [amount, setAmount] = useState("");
 
   const calculateDivision = amount / currency;
 
   const calculateResult = () => {
-    setResult(calculateDivision.toFixed(2));
+    setResultData({
+      amount,
+      result: calculateDivision.toFixed(2),
+      currency: currencies.find(({ value }) => +currency === value)?.shortcut,
+    });
   };
 
   return (
@@ -38,8 +43,8 @@ function App() {
               labelText="Set currency:"
             />
           </Fieldset>
-          <SectionResult result={result} />
-          <Buttons setResult={setResult} setAmount={setAmount} />
+          <SectionResult resultData={resultData} />
+          <Buttons setResult={setResultData} setAmount={setAmount} />
         </Form>
         <Footer />
       </Container>
