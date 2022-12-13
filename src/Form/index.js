@@ -4,7 +4,6 @@ const Form = ({ children, calculateResult, setAmount }) => {
   const onFormSubmit = (event) => {
     event.preventDefault();
     calculateResult();
-    setAmount("");
   };
 
   return (
