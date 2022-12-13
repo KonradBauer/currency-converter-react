@@ -1,4 +1,25 @@
-https://konradbauer.github.io/currency-converter-react/
+# Currency converter 💱
+
+## This app will show you how much dollars, rubles, francs or pounds your zloty is worth. Rates are constant at now.
+
+## Demo: https://konradbauer.github.io/currency-converter-react/
+
+### How to use: 
+
+![animation](https://github.com/KonradBauer/currency-converter-react/blob/main/public/currencyConverterAnimation.gif?raw=true)
+
+### Used technologies:
+<ol>
+<li>JavaScript (ES6)</li>
+<li>create-react-app</li>
+<li>React</li>
+<li>Webpack</li>
+<li>Babel</li>
+<li>JSX</li>
+<li>Hooks</li>
+<li>Controlled Components</li>
+<li>Arrow functions</li>
+</ol>
 
 # Getting Started with Create React App
 
