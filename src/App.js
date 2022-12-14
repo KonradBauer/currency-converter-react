@@ -12,7 +12,7 @@ import currencies from "./currencies";
 
 function App() {
   const [resultData, setResultData] = useState({});
-  const [currency, setCurrency] = useState(4.87);
+  const [currency, setCurrency] = useState([currencies[0].value]);
   const [amount, setAmount] = useState("");
 
   const calculateDivision = amount / currency;
