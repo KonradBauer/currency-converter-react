@@ -9,6 +9,7 @@ import Fieldset from "./Fieldset";
 import SectionResult from "./SectionResult";
 import SelectBody from "./SelectBody";
 import currencies from "./currencies";
+import Clock from "./Clock";
 
 function App() {
   const [resultData, setResultData] = useState({});
@@ -31,6 +32,7 @@ function App() {
         <Form calculateResult={calculateResult} setAmount={setAmount}>
           <Fieldset>
             <Legend title="Currency converter" />
+            <Clock />
             <Input
               amount={amount}
               setAmount={setAmount}
