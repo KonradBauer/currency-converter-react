@@ -8,7 +8,7 @@ const Clock = () => {
       setTime(new Date());
     }, 1000);
     return () => clearInterval(interval);
-  });
+  }, []);
 
   return <div>{time.toLocaleTimeString()}</div>;
 };
