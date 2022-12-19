@@ -14,14 +14,14 @@ const Clock = () => {
   return (
     <>
       <div className="timerLayout">
-        Dzisiaj jest
+        Dzisiaj jest{" "}
         {time.toLocaleDateString("pl", {
           weekday: "long",
           day: "numeric",
           month: "long",
           year: "numeric",
         })}
-        {time.toLocaleTimeString()}
+        , {time.toLocaleTimeString()}
       </div>
     </>
   );
