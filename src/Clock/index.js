@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./style.css";
 
 const Clock = () => {
   const [time, setTime] = useState(new Date());
@@ -10,7 +11,20 @@ const Clock = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return <div>{time.toLocaleTimeString()}</div>;
+  return (
+    <>
+      <div className="timerLayout">
+        Dzisiaj jest
+        {time.toLocaleDateString("pl", {
+          weekday: "long",
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        })}
+        {time.toLocaleTimeString()}
+      </div>
+    </>
+  );
 };
 
 export default Clock;

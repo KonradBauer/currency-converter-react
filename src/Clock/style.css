@@ -1,0 +1,5 @@
+.timerLayout {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Archivo", sans-serif;
+}
