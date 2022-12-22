@@ -1,13 +1,12 @@
-import "./style.css";
+import { LabelSpan, CurrencySelect } from "./styled";
 import currencies from "../currencies";
 
 const SelectBody = ({ labelText, currency, setCurrency }) => {
   return (
     <p>
       <label>
-        <span className="form__labelText">{labelText}</span>
-        <select
-          className="form__input"
+        <LabelSpan>{labelText}</LabelSpan>
+        <CurrencySelect
           value={currency}
           onChange={({ target }) => {
             setCurrency(target.value);
@@ -18,7 +17,7 @@ const SelectBody = ({ labelText, currency, setCurrency }) => {
               {currency.name}
             </option>
           ))}
-        </select>
+        </CurrencySelect>
       </label>
     </p>
   );
