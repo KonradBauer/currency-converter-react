@@ -1,14 +1,13 @@
-import "./style.css";
+import { InputStyle, LabelSpan } from "./styled";
 
 const Input = ({ placeholder, labelText, amount, setAmount }) => {
   return (
     <p>
       <label>
-        <span className="form__labelText">{labelText}</span>
-        <input
+        <LabelSpan>{labelText}</LabelSpan>
+        <InputStyle
           value={amount}
           onChange={({ target }) => setAmount(target.value)}
-          className="form__input"
           min="1"
           name="amount"
           placeholder={placeholder}
