@@ -1,5 +1,5 @@
-import "./style.css";
+import { AppTitle } from "./styled";
 
-const Legend = ({ title }) => <legend className="form__legend">{title}</legend>;
+const Legend = ({ title }) => <AppTitle>{title}</AppTitle>;
 
 export default Legend;
