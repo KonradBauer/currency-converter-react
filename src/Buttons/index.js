@@ -1,11 +1,10 @@
-import "./style.css";
+import { Button } from "./styled";
 
 const Buttons = ({ setResult, setAmount }) => (
   <p>
-    <button className="form__button">Calculate</button>
+    <Button>Calculate</Button>
 
-    <button
-      className="form__button"
+    <Button
       type="reset"
       onClick={() => {
         setResult("");
@@ -13,7 +12,7 @@ const Buttons = ({ setResult, setAmount }) => (
       }}
     >
       Reset
-    </button>
+    </Button>
   </p>
 );
 
