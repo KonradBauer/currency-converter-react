@@ -1,5 +1,5 @@
-import "./style.css";
+import { FooterStyle } from "./styled";
 
-const Footer = () => <footer className="footer">YouCode 02.03.2022</footer>;
+const Footer = () => <FooterStyle>YouCode 22.12.2022</FooterStyle>;
 
 export default Footer;
