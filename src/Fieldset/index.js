@@ -1,7 +1,5 @@
-import "./style.css";
+import { LayoutBox } from "./styled";
 
-const Fieldset = ({ children }) => (
-  <fieldset className="form__fieldset">{children}</fieldset>
-);
+const Fieldset = ({ children }) => <LayoutBox>{children}</LayoutBox>;
 
 export default Fieldset;
