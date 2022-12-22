@@ -1,16 +1,12 @@
-import "./style.css";
+import { Wrapper } from "./styled";
 
-const Form = ({ children, calculateResult, setAmount }) => {
+const Form = ({ children, calculateResult }) => {
   const onFormSubmit = (event) => {
     event.preventDefault();
     calculateResult();
   };
 
-  return (
-    <form onSubmit={onFormSubmit} className="form">
-      {children}
-    </form>
-  );
+  return <Wrapper onSubmit={onFormSubmit}>{children}</Wrapper>;
 };
 
 export default Form;
