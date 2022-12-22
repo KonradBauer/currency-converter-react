@@ -1,18 +1,16 @@
-import "./style.css";
+import { ResultWrapper, FontSpan } from "./styled";
 import React from "react";
 
 const SectionResult = ({ resultData }) => {
   const { result, amount, currency } = resultData;
 
   return (
-    <section className="form__result">
+    <ResultWrapper>
       <span>
         Result:{" "}
-        <span className="section__fontStyle">
-          {result && `${amount} PLN = ${result} ${currency}`}
-        </span>
+        <FontSpan>{result && `${amount} PLN = ${result} ${currency}`}</FontSpan>
       </span>
-    </section>
+    </ResultWrapper>
   );
 };
 
