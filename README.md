@@ -18,6 +18,7 @@
 <li>JSX</li>
 <li>Hooks</li>
 <li>Controlled Components</li>
+<li>Styled Components</li>
 <li>Arrow functions</li>
 </ol>
 
