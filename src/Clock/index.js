@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import "./style.css";
+import { useState, useEffect } from "react";
+import { Layout } from "./styled";
 
 const Clock = () => {
   const [time, setTime] = useState(new Date());
@@ -13,7 +13,7 @@ const Clock = () => {
 
   return (
     <>
-      <div className="timerLayout">
+      <Layout>
         Dzisiaj jest{" "}
         {time.toLocaleDateString("pl", {
           weekday: "long",
@@ -22,7 +22,7 @@ const Clock = () => {
           year: "numeric",
         })}
         , {time.toLocaleTimeString()}
-      </div>
+      </Layout>
     </>
   );
 };
