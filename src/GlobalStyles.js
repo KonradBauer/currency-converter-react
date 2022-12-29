@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import background from "./background.jpg";
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -14,7 +15,7 @@ html {
 
 body {
   font-family: "Lato", sans-serif;
-  background-image: url("../public/background.jpg");
+  background-image: url("${background}");
   background-size: cover;
   background-position: center;
 }
