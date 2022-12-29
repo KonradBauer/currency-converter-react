@@ -8,13 +8,13 @@ const Clock = () => {
     <>
       <Layout>
         Dzisiaj jest{" "}
-        {time.toLocaleDateString("pl", {
+        {date.toLocaleDateString("pl", {
           weekday: "long",
           day: "numeric",
           month: "long",
           year: "numeric",
         })}
-        , {time.toLocaleTimeString()}
+        , {date.toLocaleTimeString()}
       </Layout>
     </>
   );
