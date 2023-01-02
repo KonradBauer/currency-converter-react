@@ -1,15 +1,8 @@
 import React, { useState } from "react";
 import Footer from "./Footer";
-import Buttons from "./Buttons";
-import Input from "./Input";
-import Legend from "./Legend";
 import Form from "./Form";
 import Container from "./Container";
-import Fieldset from "./Fieldset";
-import SectionResult from "./SectionResult";
-import SelectBody from "./SelectBody";
 import currencies from "./currencies";
-import Clock from "./Clock";
 
 function App() {
   const [resultData, setResultData] = useState({});
@@ -29,25 +22,15 @@ function App() {
   return (
     <body>
       <Container>
-        <Form calculateResult={calculateResult} setAmount={setAmount}>
-          <Fieldset>
-            <Legend title="Currency converter" />
-            <Clock />
-            <Input
-              amount={amount}
-              setAmount={setAmount}
-              placeholder="set your PLN amount"
-              labelText=" Amount*:"
-            />
-            <SelectBody
-              currency={currency}
-              setCurrency={setCurrency}
-              labelText="Set currency:"
-            />
-          </Fieldset>
-          <SectionResult resultData={resultData} />
-          <Buttons setResult={setResultData} setAmount={setAmount} />
-        </Form>
+        <Form
+          calculateResult={calculateResult}
+          setAmount={setAmount}
+          amount={amount}
+          currency={currency}
+          setCurrency={setCurrency}
+          resultData={resultData}
+          setResultData={setResultData}
+        />
         <Footer />
       </Container>
     </body>
