@@ -1,5 +1,5 @@
 import { LabelSpan, CurrencySelect } from "./styled";
-import currencies from "../currencies";
+import useCurrencies from "../useCurrencies";
 
 const SelectBody = ({ labelText, currency, setCurrency }) => {
   return (
@@ -12,7 +12,7 @@ const SelectBody = ({ labelText, currency, setCurrency }) => {
             setCurrency(target.value);
           }}
         >
-          {currencies.map((currency) => (
+          {useCurrencies.map((currency) => (
             <option key={currency.key} value={currency.value}>
               {currency.name}
             </option>

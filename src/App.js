@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import Footer from "./Footer";
 import Form from "./Form";
 import Container from "./Container";
-import currencies from "./currencies";
+import useCurrencies from "./useCurrencies";
 
 function App() {
   const [resultData, setResultData] = useState({});
-  const [currency, setCurrency] = useState([currencies[0].value]);
+  const [currency, setCurrency] = useState([useCurrencies[0].value]);
   const [amount, setAmount] = useState("");
 
   const calculateDivision = amount / currency;
@@ -15,7 +15,8 @@ function App() {
     setResultData({
       amount,
       result: calculateDivision.toFixed(2),
-      currency: currencies.find(({ value }) => +currency === value)?.shortcut,
+      currency: useCurrencies.find(({ value }) => +currency === value)
+        ?.shortcut,
     });
   };
 
