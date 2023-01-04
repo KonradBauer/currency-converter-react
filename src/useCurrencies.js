@@ -1,16 +1,13 @@
-import { Axios } from "axios";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
-const useuseCurrencies = () => {};
+const useCurrencies = () => {
+  const [ratesData, setRatesData] = useState({});
 
-var requestURL = "https://api.exchangerate.host/latest";
-var request = new XMLHttpRequest();
-request.open("GET", requestURL);
-request.responseType = "json";
-request.send();
-
-request.onload = function () {
-  var response = request.response;
-  console.log(response);
+  useEffect = axios
+    .get("https://api.exchangerate.host/latest")
+    .then((response) => console.log(response.data))
+    .catch((error) => console.error(error));
 };
 
-export default useuseCurrencies;
+export default useCurrencies;
