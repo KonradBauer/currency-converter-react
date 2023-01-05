@@ -2,19 +2,16 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 const useCurrencies = () => {
-  const [ratesData, setRatesData] = useState({});
-  const getURL = "https://api.exchangerate.host/latest";
+  const [resultData, setResultData] = useState(null);
 
-  useEffect = () => {
+  useEffect(() => {
     axios
-      .get(getURL)
-      .then((response) => console.log(response.data))
+      .get("https://api.exchangerate.host/latest")
+      .then((response) => setResultData(response.data))
       .catch((error) => console.error(error));
+  }, []);
 
-    setRatesData(() => response.data);
-  };
-
-  return ratesData;
+  return resultData;
 };
 
 export default useCurrencies;
