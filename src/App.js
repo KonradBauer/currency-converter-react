@@ -6,9 +6,10 @@ import useCurrencies from "./useCurrencies";
 
 function App() {
   const [resultData, setResultData] = useState({});
-  const [currencies, setCurrencies] = useCurrencies();
-  const [currency, setCurrency] = useState(currencies[0].value);
+  const [currency, setCurrency] = useState(currenciesData[0].value);
   const [amount, setAmount] = useState();
+
+  const currenciesData = useCurrencies();
 
   const calculateDivision = amount / currency;
 
@@ -16,7 +17,7 @@ function App() {
     setResultData({
       amount,
       result: calculateDivision.toFixed(2),
-      currency: currencies.find(({ value }) => +currency === value)?.name,
+      currency: currenciesData.find(({ value }) => +currency === value)?.name,
     });
   };
 
