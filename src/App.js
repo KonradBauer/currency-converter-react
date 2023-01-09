@@ -5,11 +5,11 @@ import Container from "./Container";
 import useCurrencies from "./useCurrencies";
 
 function App() {
-  const [resultData, setResultData] = useState({});
-  const [currency, setCurrency] = useState(currenciesData[0].value);
-  const [amount, setAmount] = useState();
-
   const currenciesData = useCurrencies();
+
+  const [resultData, setResultData] = useState({});
+  const [currency, setCurrency] = useState(currenciesData);
+  const [amount, setAmount] = useState();
 
   const calculateDivision = amount / currency;
 
