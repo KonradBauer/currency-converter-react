@@ -15,9 +15,7 @@ const SelectBody = ({ labelText, currency, setCurrency }) => {
           }}
         >
           {Object.keys(currenciesData).map((currency) => (
-            <option key={currency.name} value={currency.rates}>
-              {currency.name}
-            </option>
+            <option value={currency.rates}>{currency.name}</option>
           ))}
         </CurrencySelect>
       </label>
