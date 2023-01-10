@@ -15,6 +15,7 @@ const Form = ({
   setCurrency,
   resultData,
   setResultData,
+  currenciesData,
 }) => {
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -35,6 +36,7 @@ const Form = ({
         <SelectBody
           currency={currency}
           setCurrency={setCurrency}
+          currenciesData={currenciesData}
           labelText="Set currency:"
         />
       </Fieldset>
