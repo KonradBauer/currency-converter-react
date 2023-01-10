@@ -17,7 +17,7 @@ function App() {
     setResultData({
       amount,
       result: calculateDivision.toFixed(2),
-      currency: currenciesData.find(({ value }) => +currency === value)?.name,
+      currency: currenciesData.find(({ value }) => +currency === value)?.rates,
     });
   };
 
