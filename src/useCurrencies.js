@@ -14,7 +14,7 @@ const useCurrencies = () => {
       .catch((error) => console.error(error));
   }, []);
 
-  return [currencies, setCurrencies];
+  return currencies;
 };
 
 export default useCurrencies;
