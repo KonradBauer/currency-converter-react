@@ -6,6 +6,7 @@ import Fieldset from "../Fieldset";
 import SectionResult from "../SectionResult";
 import SelectBody from "../SelectBody";
 import Clock from "../Clock";
+import Loading from "../Loading";
 
 const Form = ({
   calculateResult,
@@ -31,14 +32,15 @@ const Form = ({
           amount={amount}
           setAmount={setAmount}
           placeholder="set your PLN amount"
-          labelText=" Amount*:"
+          labelText="Amount*:"
         />
         <SelectBody
           currency={currency}
           setCurrency={setCurrency}
           currenciesData={currenciesData}
           labelText="Set currency:"
-        />
+        />{" "}
+        <Loading />
       </Fieldset>
       <SectionResult resultData={resultData} />
       <Buttons setResult={setResultData} setAmount={setAmount} />
