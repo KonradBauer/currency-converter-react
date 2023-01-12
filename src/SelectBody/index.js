@@ -1,8 +1,6 @@
-import useCurrencies from "../useCurrencies";
 import { LabelSpan, CurrencySelect } from "./styled";
 
 const SelectBody = ({ labelText, currency, setCurrency, currenciesData }) => {
-  currenciesData = useCurrencies();
   return (
     <p>
       <label>
