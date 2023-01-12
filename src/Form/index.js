@@ -7,6 +7,7 @@ import SectionResult from "../SectionResult";
 import SelectBody from "../SelectBody";
 import Clock from "../Clock";
 import Loading from "../Loading";
+import useCurrencies from "../useCurrencies";
 
 const Form = ({
   calculateResult,
@@ -22,6 +23,14 @@ const Form = ({
     event.preventDefault();
     calculateResult();
   };
+
+  const loading = useCurrencies();
+
+  if (loading) {
+    <Loading />;
+  } else {
+    return null;
+  }
 
   return (
     <Wrapper onSubmit={onFormSubmit}>
@@ -39,8 +48,7 @@ const Form = ({
           setCurrency={setCurrency}
           currenciesData={currenciesData}
           labelText="Set currency:"
-        />{" "}
-        <Loading />
+        />
       </Fieldset>
       <SectionResult resultData={resultData} />
       <Buttons setResult={setResultData} setAmount={setAmount} />
